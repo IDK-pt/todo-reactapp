@@ -7,11 +7,11 @@ function TodoList(){
     const [todos, setTodos] = useContext(TodoContext)
 
     return(
-        <div>
+        <div className="mx-auto" style={{width:'30vw', textAlign:'jutify'}}>
             {todos.map(todo => (
-                <Todo id={todo.todo} todo={todo.todo}/>
+            <Todo id={todo.todo} todo={todo.todo}/>
             ))}
-        </div>
+        </div> 
     );
 }
 

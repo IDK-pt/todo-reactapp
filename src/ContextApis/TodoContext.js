@@ -5,7 +5,7 @@ export const TodoContext = createContext()
 export const TodoProvider = props =>{
     const [todos, setTodos] = useState([
         {
-            todo: 'Clean room'
+            todo: 'Clean roomasdas dasdas dasdasd asdasd asd as das das da sda sdas das d'
         },
         {
             todo: 'Study'
