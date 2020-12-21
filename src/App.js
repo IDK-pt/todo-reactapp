@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import TodoList from './Components/TodoList'
+import {TodoProvider} from './ContextApis/TodoContext'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='vertical-center App'>
+      <div className="card-transparent mx-auto card-mod">
+        <div className="card-boy card-body-mod img-rounded p-5" style={{backgroundColor: 'rgba(0,0,0, 0.15)'}}>
+          <h1 className='text-white' style={{fontSize:60}}>Todo List</h1>
+          <hr></hr>
+          <TodoProvider>
+            <TodoList/>
+          </TodoProvider>
+        </div>
+      </div>
     </div>
   );
 }
