@@ -1,4 +1,4 @@
-function Todo({id, todo}){
+function Todo({key, todo}){
     return(
         <div className='row'>
             <div className='col list-group-item' style={{textAlign:'justify'}}>{todo}</div>
