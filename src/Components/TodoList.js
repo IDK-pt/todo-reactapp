@@ -28,16 +28,10 @@ function TodoList(){
         <div className="mx-auto" style={{width:'30vw', textAlign:'jutify'}}>
             <AddTodo getFlashQuery={(q) => setFlash(q)} getAddQuery={(q) => setRerenderTrigger(q)}/>
             <br></br> 
-            {// Checks if flash has a msg prop and if so displays it
-            flash.msg ? (
-                <FlashAlert severity={flash.severity} msg={flash.msg} change={flash.trigger}/>
-            ) : (
-                <span></span>
-            )
-            }
+            {<FlashAlert severity={flash.severity} msg={flash.msg} change={flash.trigger}/>}
             <br></br>
             {todos.map(todo => (
-            <Todo key={todo.todo} todo={todo.todo || 'Error'}/>
+            <Todo key={todo.todo || 'nan'} todo={todo.todo || 'Error'}/>
             ))}
         </div> 
     );

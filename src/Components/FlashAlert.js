@@ -4,14 +4,16 @@ function FlashAlert({severity, msg, change}){
 
     const elementClassClean = 'row alert-fix alert-' + severity
 
-    const [fade, setFade] = useState('')
+    const [fade, setFade] = useState(elementClassClean)
 
     useEffect(() => {
-        console.log('use')
-        setFade('fadeIn ' + elementClassClean)
-        setTimeout(() => { 
-            setFade('fadeOut ' + elementClassClean)
-        }, 5000);
+        if (msg){
+            console.log('use')
+            setFade('fadeIn ' + elementClassClean)
+            setTimeout(() => { 
+                setFade('fadeOut ' + elementClassClean)
+            }, 5000);
+        }   
     }, [change])
 
 

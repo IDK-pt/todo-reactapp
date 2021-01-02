@@ -1,6 +1,26 @@
 .App {
   text-align: center;
 }
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(124, 134, 139);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(90, 90, 90);
+}
 
 .vertical-center {
   min-height: 100%; /* Fallback for browsers do NOT support vh unit */
