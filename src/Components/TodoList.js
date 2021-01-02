@@ -26,7 +26,13 @@ function TodoList(){
 
     return(
         <div className="mx-auto" style={{width:'30vw', textAlign:'jutify'}}>
-            <FlashAlert severity={flash.severity} msg={flash.msg}/>
+            {// Checks if flash has a severity prop and if so displays it
+            flash.severity ? (
+                <FlashAlert severity={flash.severity} msg={flash.msg}/>
+            ) : (
+                <span></span>
+            )
+            }
             <AddTodo getFlashQuery={(q) => setFlash(q)} getAddQuery={(q) => setRerenderTrigger(q)}/>
             <br></br> 
             {todos.map(todo => (
