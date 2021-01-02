@@ -1,25 +1,24 @@
 import {useState, useEffect} from 'react'
 
-function FlashAlert({severity, msg}){
+function FlashAlert({severity, msg, change}){
 
-    const elementClassClean = 'mb-3 row alert-fix alert-' + severity
+    const elementClassClean = 'row alert-fix alert-' + severity
 
-    const [hide, setHide] = useState({display: 'none'})
+    const [fade, setFade] = useState('')
 
     useEffect(() => {
         console.log('use')
-        setHide({display:'block'})
+        setFade('fadeIn ' + elementClassClean)
         setTimeout(() => { 
-            setHide({display:'none'})
+            setFade('fadeOut ' + elementClassClean)
         }, 5000);
-    }, [severity])
+    }, [change])
+
 
     return(
-        <div style={hide}>
-            <div className={elementClassClean}>
-                <h2>{msg}</h2>
-            </div>
-        </div>   
+        <div className={fade}>
+            <h2>{msg}</h2>
+        </div>
     );
 }
 
