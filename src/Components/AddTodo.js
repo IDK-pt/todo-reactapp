@@ -29,7 +29,7 @@ function AddTodo({getAddQuery, getFlashQuery}){
 
     return(
     <div className='row'>
-        <input value={newTodoInput} onChange={(e)=>setNewTodoInput(e.target.value)} className='col list-group-item' placeholder='Add new TODO' style={{textAlign:'justify', fontSize:'25px'}} />
+        <input value={newTodoInput} onChange={(e)=>setNewTodoInput(e.target.value)} className='col list-group-item' placeholder='Add new TODO' style={{textAlign:'justify', fontSize:'1.5vw'}} />
         <div className='col col-lg-2' style={{padding:0, margin:0}}>
             <button onClick={addTodo} className='btn btn-warning fixed-btn' style={{ backgroundColor:'#fd7e14'}}>Add</button>
         </div>

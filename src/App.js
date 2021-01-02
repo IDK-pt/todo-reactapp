@@ -6,7 +6,7 @@ import {useEffect} from 'react'
 function App() {
 
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify([{todo: 'ola'}, {todo: 'adeus'}]))
+    //localStorage.setItem('todos', JSON.stringify([{todo: 'ola'}, {todo: 'adeus'}]))
   }, [])
 
   return (

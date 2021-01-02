@@ -17,7 +17,7 @@ function FlashAlert({severity, msg, change}){
 
     return(
         <div className={fade}>
-            <h2>{msg}</h2>
+            <h2 className='alert-txt'>{msg}</h2>
         </div>
     );
 }
