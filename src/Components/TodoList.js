@@ -30,9 +30,14 @@ function TodoList(){
             <br></br> 
             {<FlashAlert severity={flash.severity} msg={flash.msg} change={flash.trigger}/>}
             <br></br>
-            {todos.map(todo => (
-            <Todo key={todo.todo || 'nan'} todo={todo.todo || 'Error'}/>
-            ))}
+            {todos ?
+                todos.map(todo => (
+                <Todo key={todo.todo || 'nan'} todo={todo.todo || 'Error'}/>
+                ))
+                : (
+                    <h2>No todos found</h2>
+                )
+            }
         </div> 
     );
 }

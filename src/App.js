@@ -5,10 +5,6 @@ import {useEffect} from 'react'
 
 function App() {
 
-  useEffect(() => {
-    //localStorage.setItem('todos', JSON.stringify([{todo: 'ola'}, {todo: 'adeus'}]))
-  }, [])
-
   return (
     <div className='vertical-center App'>
       <div className="card-transparent mx-auto card-mod" style={{marginTop:'30px',marginBottom:'30px'}}>

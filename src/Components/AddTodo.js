@@ -10,16 +10,17 @@ function AddTodo({getAddQuery, getFlashQuery}){
 
     useEffect(() => {
         getFlashQuery(newFlashMsg)
+        // eslint-disable-next-line
     }, [flashTrigger])
 
     function addTodo(){
-        let todoList = JSON.parse(localStorage.getItem("todos"));
         if(newTodoInput === '' || newTodoInput === null || newTodoInput === undefined){
             setNewFlashMsg({severity: 'danger', msg:'Error when adding a new TODO', trigger: flashTrigger})
             setFlashTrigger(!flashTrigger)
         }else{
             setNewFlashMsg({severity: 'success', msg:`"${newTodoInput}" added`, trigger: flashTrigger})
             setFlashTrigger(!flashTrigger)
+            let todoList = JSON.parse(localStorage.getItem("todos")) || [];
             todoList.push({todo: newTodoInput})
             localStorage.setItem("todos", JSON.stringify(todoList));
         }

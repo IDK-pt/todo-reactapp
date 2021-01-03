@@ -14,6 +14,7 @@ function FlashAlert({severity, msg, change}){
                 setFade('fadeOut ' + elementClassClean)
             }, 5000);
         }   
+        // eslint-disable-next-line
     }, [change])
 
 
