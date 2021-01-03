@@ -32,10 +32,12 @@ function TodoList(){
             <br></br>
             {todos ?
                 todos.map(todo => (
-                <Todo key={todo.todo || 'nan'} todo={todo.todo || 'Error'}/>
+                <Todo key={todo.todo || 'nan'} todo={todo.todo || 'Error'} getRemoveQuery={(q) => setRerenderTrigger(q)} />
                 ))
                 : (
-                    <h2>No todos found</h2>
+                    <div className='row no-todos'>
+                        <div className='col list-group-item' style={{textAlign:'center', fontSize:'1.5vw'}}>No TODOs found</div>
+                    </div>
                 )
             }
         </div> 

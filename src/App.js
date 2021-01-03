@@ -1,7 +1,5 @@
 import './App.css';
 import TodoList from './Components/TodoList'
-import {TodoProvider} from './ContextApis/TodoContext'
-import {useEffect} from 'react'
 
 function App() {
 
@@ -13,9 +11,7 @@ function App() {
           <br></br>
           <hr></hr>
           <br></br>
-          <TodoProvider>
-            <TodoList/>
-          </TodoProvider>
+          <TodoList/>
         </div>
       </div>
     </div>
