@@ -12,7 +12,7 @@ function FlashAlert({severity, msg, change}){
             setFade('fadeIn ' + elementClassClean)
             setTimeout(() => { 
                 setFade('fadeOut ' + elementClassClean)
-            }, 5000);
+            }, 3000);
         }   
         // eslint-disable-next-line
     }, [change])
